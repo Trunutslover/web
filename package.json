@@ -1,7 +1,7 @@
 {
   "name": "aunited",
   "private": true,
-  "workspaces": ["frontend/*", "frontend/ui/*", "frontend/utils/*", "backend/*"],
+  "workspaces": ["frontend/*", "frontend/ui/*", "frontend/utils/*"],
   "scripts": {
     "dashboard:dev": "yarn workspace @frontend/dashboard dev",
     "gateway:dev": "yarn workspace @backend/gateway dev",
