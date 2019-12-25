@@ -1,6 +1,6 @@
 import gql from 'graphql-tag'
 import * as actions from '../constants'
-import { push } from 'react-router-redux';
+import { push } from 'react-router-redux'
 
 export const change = (field, value) => ({
   type: actions.change,

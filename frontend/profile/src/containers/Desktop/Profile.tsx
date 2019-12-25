@@ -1,5 +1,5 @@
-import Profile from "../../components/desktop/Profile"
-import { connect } from 'react-redux';
+import Profile from '../../components/desktop/Profile'
+import { connect } from 'react-redux'
 
 export default connect(
   state => ({

@@ -1,4 +1,4 @@
-import React from "react"
+import React from 'react'
 import { injectIntl, InjectedIntl } from 'react-intl'
 import { Input } from '@ui/input'
 import { Text } from '@ui/text'
