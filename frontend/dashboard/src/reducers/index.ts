@@ -6,6 +6,7 @@ import users from '@frontend/users/src/reducers'
 import config from './config'
 import locale from './locale'
 import me from './me'
+import profile from '@frontend/profile/src/reducers'
 
 export default combineReducers({
   auth,
@@ -15,4 +16,5 @@ export default combineReducers({
   router,
   security,
   users,
+  profile
 })
