@@ -1,5 +1,6 @@
 import gql from 'graphql-tag'
 import * as actions from '../constants'
+import { push } from 'react-router-redux';
 
 export const change = (field, value) => ({
   type: actions.change,
@@ -10,24 +11,30 @@ export const change = (field, value) => ({
 export const register = () => async (dispatch, getState, client) => {
   const { email, password } = getState().auth.registration
 
-  const { data } = await client.mutate({
-    mutation: gql`
-      mutation Register($input: RegisterUserInput!) {
-        register(input: $input) {
-          errors {
-            email
-            password
-          }
-        }
-      }
-    `,
-    variables: {
-      input: {
-        email,
-        password,
-      },
-    },
-  })
+  // const { data } = await client.mutate({
+  //   mutation: gql`
+  //     mutation Register($input: RegisterUserInput!) {
+  //       register(input: $input) {
+  //         errors {
+  //           email
+  //           password
+  //         }
+  //       }
+  //     }
+  //   `,
+  //   variables: {
+  //     input: {
+  //       email,
+  //       password,
+  //     },
+  //   },
+  // })
+
+  const data = {
+    register: {
+      errors: false
+    }
+  }
 
   if (data.register.errors) {
     dispatch({
@@ -38,6 +45,7 @@ export const register = () => async (dispatch, getState, client) => {
     dispatch({
       type: actions.clear,
     })
+    dispatch(push(`/auth`))
   }
 }
 

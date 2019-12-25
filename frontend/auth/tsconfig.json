@@ -1,3 +1,18 @@
 {
-  "extends": "../../tsconfig.json"
+  "compilerOptions": {
+    "pretty": true,
+    "target": "es6",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noImplicitAny": false,
+    "noLib": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowJs": true,
+    "lib": ["es6"],
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "preserveSymlinks": true,
+    "jsx": "react"
+  }
 }
