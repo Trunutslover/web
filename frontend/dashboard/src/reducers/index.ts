@@ -16,5 +16,5 @@ export default combineReducers({
   router,
   security,
   users,
-  profile
+  profile,
 })

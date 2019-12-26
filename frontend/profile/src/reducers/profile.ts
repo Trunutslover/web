@@ -8,12 +8,12 @@ interface State {
 
 const initialState: State = {
   firstName: `Дуглас`,
-  lastName: `Крокфорд`
+  lastName: `Крокфорд`,
 }
 
 export default createReducer(initialState, {
   [actions.change]: (state, { field, value }) => ({
     ...state,
-    [field]: value
-  })
+    [field]: value,
+  }),
 })
